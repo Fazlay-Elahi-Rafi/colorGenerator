@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import rgbToHex from "../utils/rgbToHex";
+import rgbToHex from "./utils/rgbToHex";
 
 export default function SingleColor({ rgb, weight, index, hexColor }) {
   const [alert, setAlert] = useState(false);

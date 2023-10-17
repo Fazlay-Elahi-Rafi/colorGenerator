@@ -35,19 +35,17 @@ export default function ColorGen() {
     setTarget(totalTarget);
   }, [targetColor]);
 
-
   return (
     <>
       <section className="container">
-        <h3>color generator</h3>
+        <h3>RAFI. color generator</h3>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             value={color}
             onChange={(e) => setColor(e.target.value)}
             placeholder="#f15025"
-            className={`${error ? "error" : null}`}
-            style={{ border: "1px solid #8d8d8d" }}
+            className={`inp ${error ? "error" : null}`}
           />
 
           <input
@@ -55,11 +53,14 @@ export default function ColorGen() {
             value={targetColor}
             onChange={(e) => setTarget(e.target.value)}
             className={`${error ? "error" : null}`}
-            style={{ border: "1px solid #198d19", margin: "0 1rem" }}
+            style={{
+              border: "1px solid #198d19",
+              margin: "0 1rem",
+            }}
           />
 
           <button className="btn" type="submit">
-            submit
+            generate
           </button>
         </form>
       </section>
